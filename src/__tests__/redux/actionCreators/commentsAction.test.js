@@ -1,6 +1,6 @@
 import {shallow} from 'enzyme';
 import {COMMENTS_LOADING, COMMENTS_LOADED} from '../../../redux/actionTypes/actionTypes';
-import {commentsList} from '../../../redux/actionCreators/commentsAction';
+import {commentsList} from '../../../redux/actionCreators/commentsActionCreator';
 
 describe('commentsAction', () => {
   describe('commentsList', () => {
