@@ -4,16 +4,16 @@ import commentsReducer from '../../../redux/reducers/commentsReducer';
 
 describe('commentsReducer', () => {
   describe('COMMENTS_LOADING', () => {
-    test('sets comments as an empty array', () => {
-      const action = {type: COMMENTS_LOADING};
-      const state = {comments: ['comment']};
+    const state = {comments: ['comment']};
+    const action = {type: COMMENTS_LOADING};
+    test('sets an empty comments array', () => {
       expect(commentsReducer(state, action)).toEqual({comments: []});
     });
   });
   describe('COMMENTS_LOADED', () => {
+    const state = {comments: []};
+    const action = {type: COMMENTS_LOADED, comments: ['comment']};
     test('sets values in comments array', () => {
-      const state = {comments: []};
-      const action = {type: COMMENTS_LOADED, comments: ['comment']};
       expect(commentsReducer(state, action)).toEqual({comments: ['comment']});
     });
   });
